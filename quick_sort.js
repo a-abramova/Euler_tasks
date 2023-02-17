@@ -1,4 +1,4 @@
-
+// сложность в наилучшем/среднем случае: O(n Log n), в наихудшем: O(n^2)
 (() => {
   function quickSort(arr) {
     if (arr <= 1) return arr;
@@ -16,6 +16,7 @@
     return quickSort(leftArr).concat(middleValue, quickSort(rightArr));
   };
   console.time('answer time');
+  // [200, 201, 300, 400, 500, 700, 800]
   const rez = quickSort([700, 500, 800, 400, 300, 200, 201]);
   console.timeEnd('answer time');
   console.log(rez);
